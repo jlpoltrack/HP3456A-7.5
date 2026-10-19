@@ -1,0 +1,13 @@
+# Build output (regenerate with the commands in README.md)
+build/
+
+# Chip backups and ROM images
+*.bin
+
+# Upstream archive: contains HP's ROM images; link the EEVblog thread instead
+3456AFirmware.zip
+
+# Python / macOS
+__pycache__/
+*.pyc
+.DS_Store
