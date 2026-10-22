@@ -115,7 +115,6 @@ Contributions welcome. Sizes are rough estimates.
 | Stability indicator | ~100–150 B | Annunciator lights once the last N readings agree within X counts |
 | Min/max hold | ~100 B | Track the extremes, viewable with RECALL L / U |
 | Pt100 RTD temperature | ~300–400 B | 4-wire ohms to °C (Callendar–Van Dusen), using the ROM's BCD maths |
-| 7th digit in packed HPIB output | small | Currently only the unpacked format carries it |
 
 The first three fit together in the 154-byte block below the vectors, leaving the 797-byte
 block for one larger feature.
@@ -135,7 +134,7 @@ chip makes testing and rollback fast. See the end of `docs/HARDWARE_VALIDATION.m
 | `tools/replicate.py` | Tiles an image to fill a larger chip |
 | `tools/lst2asm.py` | Recovers source from an AS02 listing |
 | `tools/patch.py` | Earlier in-place binary patcher, superseded by the source build |
-| `docs/` | Flash adapter wiring and the hardware test plan with results |
+| `docs/` | Flash adapter wiring, the hardware test plan with results, and the [HP-IB command reference](docs/GPIB_COMMANDS.md) |
 
 ## Credits, license and disclaimer
 
