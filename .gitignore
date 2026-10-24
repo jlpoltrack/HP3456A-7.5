@@ -11,3 +11,10 @@ build/
 __pycache__/
 *.pyc
 .DS_Store
+
+# KiCad: local backups, GUI state, scratch rounds
+*-backups/
+*.kicad_prl
+fp-info-cache
+*.lck
+routing-variants/
