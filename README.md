@@ -84,7 +84,8 @@ Expected hashes for the tested build are listed in `docs/HARDWARE_VALIDATION.md`
 The validated meter uses an SST39SF040 flash chip, wired as a 27256-style ROM in the 28-pin U7
 socket on the A4 controller board, and programmed with a TL866 (`minipro`). Wiring, continuity
 checks and programming commands are in
-[`docs/U7_FLASH_ADAPTER.md`](docs/U7_FLASH_ADAPTER.md).
+[`docs/U7_FLASH_ADAPTER.md`](docs/U7_FLASH_ADAPTER.md). A PCB adapter that keeps the chip stock is in
+[`hardware/u7-adapter/`](hardware/u7-adapter/) (designed, not yet built).
 
 Before you install:
 
@@ -134,6 +135,7 @@ chip makes testing and rollback fast. See the end of `docs/HARDWARE_VALIDATION.m
 | `tools/replicate.py` | Tiles an image to fill a larger chip |
 | `tools/lst2asm.py` | Recovers source from an AS02 listing |
 | `tools/patch.py` | Earlier in-place binary patcher, superseded by the source build |
+| `hardware/u7-adapter/` | KiCad project for the U7 flash adapter PCB: SST39SF040 socket on a DIP-28 plug, bank jumpers |
 | `docs/` | Flash adapter wiring, the hardware test plan with results, and the [HP-IB command reference](docs/GPIB_COMMANDS.md) |
 
 ## Credits, license and disclaimer

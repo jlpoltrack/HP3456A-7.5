@@ -86,15 +86,18 @@ To program the chip, all six wired pins must be free for the TL866 to drive:
 The bent legs must also make contact in the ZIF socket. Bending them back and forth risks
 breaking them.
 
-Recommended: make the adapter a separate part, so the flash chip itself stays stock and can go
-straight into the TL866.
+Recommended: use the adapter PCB, [`hardware/u7-adapter/`](../hardware/u7-adapter/). The flash
+chip stays stock and goes straight into the TL866. The PCB powers the chip from U7 pin 28 through a
+solder jumper, or from a wire pad to C1. It also has A15–A18 bank jumpers with pull-downs. Keep the
+current wired chip as a known-good fallback.
+
+Without the PCB, a hand-wired carrier does the same job:
 
 1. Take a 32-pin turned-pin DIP socket as a carrier.
 2. Bend out its pins 1, 2, 3, 30, 31 and 32 and wire them as in the pin map.
 3. Plug the carrier into the U7 socket, and the flash chip into the carrier.
-4. Fit a fresh SST39SF040 in the carrier. Keep the current wired chip as a known-good fallback.
 
-Check that the extra height of the carrier clears anything above the board.
+Check that the extra height of the adapter clears anything above the board.
 
 A 28-pin drop-in part (for example a 27C256-family device) would avoid an adapter. That depends on
 what socket pins 1 and 28 carry, which has not been checked.

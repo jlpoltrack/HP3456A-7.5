@@ -1,0 +1,4 @@
+off_grid U1   # socket rows aligned with the plug's (pin n+2 level with pin n): 2 x 2.54 above J2, off the 0.1 grid
+off_grid R1   # on J1's column (2.54 pitch from the on-grid J1 origin)
+off_grid R2   # on J1's column
+off_grid R3   # on J1's column

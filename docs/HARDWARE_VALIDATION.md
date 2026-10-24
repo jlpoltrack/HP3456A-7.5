@@ -20,7 +20,8 @@ Burn the 512 KB file. If the source changes, rebuild and update these hashes (co
 
 - [ ] Decide the chip route (see `docs/U7_FLASH_ADAPTER.md`):
     - **A:** desolder the wires on the current chip, program it, then rewire it.
-    - **B (recommended):** program a fresh SST39SF040 in a socketed adapter, and keep the current chip as a fallback.
+    - **B (recommended):** program a fresh SST39SF040 in a socketed adapter (the PCB in `hardware/u7-adapter/`), and keep the current chip as a fallback.
+      Its power comes from U7 pin 28 (bridge JP1) only if that pin measures +5 V; otherwise wire TP1 to C1.
 - [x] TL866 connected; `minipro --version` shows the programmer (TL866II+ 04.2.132).
 - [ ] Record the meter's power-on behaviour with the current chip, as the baseline.
 - [ ] Have a variable DC source available for the autorange tests (0 to about 15 V).
